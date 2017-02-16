@@ -1,0 +1,27 @@
+{
+  "name": "alexa-message-builder",
+  "version": "1.0.0",
+  "description": "Simple builder for Alexa replies.",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "eslint lib spec *.js",
+    "test": "node spec/support/jasmine-runner.js",
+    "debug": "node debug spec/support/jasmine-runner.js"
+  },
+  "keywords": [
+    "alexa",
+    "conversation",
+    "message",
+    "builder",
+    "echo",
+    "amazon"
+  ],
+  "author": "Slobodan Stojanovic <slobodan@cloudhorizon.com> (http://slobodan.me/)",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^3.15.0",
+    "eslint-config-defaults": "^9.0.0",
+    "jasmine": "^2.5.3",
+    "jasmine-spec-reporter": "^3.2.0"
+  }
+}
