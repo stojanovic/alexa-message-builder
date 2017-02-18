@@ -1,6 +1,6 @@
 /*global jasmine, require, process*/
 var Jasmine = require('jasmine'),
-  SpecReporter = require('jasmine-spec-reporter'),
+  SpecReporter = require('jasmine-spec-reporter').SpecReporter,
   noop = function () {},
   jrunner = new Jasmine(),
   filter

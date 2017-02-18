@@ -23,5 +23,13 @@
     "eslint-config-defaults": "^9.0.0",
     "jasmine": "^2.5.3",
     "jasmine-spec-reporter": "^3.2.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stojanovic/alexa-message-builder.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stojanovic/alexa-message-builder/issues"
+  },
+  "homepage": "https://github.com/stojanovic/alexa-message-builder"
 }
