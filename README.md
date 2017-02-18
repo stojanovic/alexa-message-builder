@@ -1,11 +1,8 @@
 # Alexa Message Builder
 
 [![](https://travis-ci.org/stojanovic/alexa-message-builder.svg?branch=master)](https://travis-ci.org/stojanovic/alexa-message-builder)
-
 [![npm](https://img.shields.io/npm/v/alexa-message-builder.svg?maxAge=2592000?style=plastic)](https://www.npmjs.com/package/alexa-message-builder)
-
 [![npm](https://img.shields.io/npm/dt/alexa-message-builder.svg?maxAge=2592000?style=plastic)](https://www.npmjs.com/package/alexa-message-builder)
-
 [![npm](https://img.shields.io/npm/l/alexa-message-builder.svg?maxAge=2592000?style=plastic)](https://github.com/claudiajs/alexa-message-builder/blob/master/LICENSE)
 
 Simple message builder for Alexa response.
