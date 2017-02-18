@@ -1,5 +1,7 @@
 # Alexa Message Builder
 
+[![](https://travis-ci.org/stojanovic/alexa-message-builder.svg?branch=master)](https://travis-ci.org/stojanovic/alexa-message-builder)
+
 Simple message builder for Alexa response.
 
 ## Installation
@@ -64,7 +66,7 @@ Building JSON responses manually is not fun and hard to read for a big JSON file
     "outputSpeech" : {
       "type": "PlainText",
       "text": "Alexa message builder is a simple message builder for Alexa responses"
-    }
+    },
     "card": {
       "type": "Standard",
       "title": "Alexa Message Builder",
