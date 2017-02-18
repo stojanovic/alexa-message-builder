@@ -42,12 +42,12 @@ will return:
 
 ```json
 {
-  version: '1.0',
-  response: {
-    shouldEndSession: false,
-    outputSpeech : {
-      type: 'PlainText',
-      ssml: 'Hello from Alexa'
+  "version": "1.0",
+  "response": {
+    "shouldEndSession": false,
+    "outputSpeech": {
+      "type": "PlainText",
+      "ssml": "Hello from Alexa"
     }
   }
 }
@@ -58,20 +58,20 @@ will return:
 Building JSON responses manually is not fun and hard to read for a big JSON files. The main motivation for this message builder is to replace them with a simple and readable syntax. For example, instead of this JSON:
 ```json
 {
-  version: '1.0',
-  response: {
-    shouldEndSession: false,
-    outputSpeech : {
-      type: 'PlainText',
-      ssml: 'Alexa message builder is a simple message builder for Alexa responses'
+  "version": "1.0",
+  "response": {
+    "shouldEndSession": false,
+    "outputSpeech" : {
+      "type": "PlainText",
+      "text": "Alexa message builder is a simple message builder for Alexa responses"
     }
-    card: {
-      type: 'Standard',
-      title: 'Alexa Message Builder',
-      text: 'Alexa message builder description',
-      image: {
-        smallImageUrl: 'http://example.com/small-image-url.png',
-        largeImageUrl: 'http://example.com/large-image-url.png
+    "card": {
+      "type": "Standard",
+      "title": "Alexa Message Builder",
+      "text": "Alexa message builder description",
+      "image": {
+        "smallImageUrl": "http://example.com/small-image-url.png",
+        "largeImageUrl": "http://example.com/large-image-url.png"
       }
     }
   }
@@ -137,12 +137,12 @@ will return:
 
 ```json
 {
-  version: '1.0',
-  response: {
-    shouldEndSession: false,
-    outputSpeech : {
-      type: 'PlainText',
-      ssml: 'Hello from Alexa'
+  "version": "1.0",
+  "response": {
+    "shouldEndSession": false,
+    "outputSpeech": {
+      "type": "PlainText",
+      "text": "Hello from Alexa"
     }
   }
 }
