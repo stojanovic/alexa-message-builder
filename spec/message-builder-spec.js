@@ -164,6 +164,27 @@ describe('Alexa Message Builder', () => {
         }
       })
     })
+
+    it('before reprompt', () => {
+      const message = new AlexaMessageBuilder().addOutputSpeech('SSML', 'some text', false).addRepromptSSML('some reprompt text')
+      expect(message.get()).toEqual({
+        version: '1.0',
+        response: {
+          shouldEndSession: true,
+          outputSpeech : {
+            type: 'SSML',
+            ssml: 'some text'
+          },
+          reprompt: {
+            outputSpeech : {
+              type: 'SSML',
+              ssml: 'some reprompt text'
+            }
+          }
+        }
+      })
+    })
+
   })
 
   describe('addSimpleCard', () => {
