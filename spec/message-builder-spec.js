@@ -239,4 +239,106 @@ describe('Alexa Message Builder', () => {
       })
     })
   })
+
+  describe('dialog directives', () => {
+    const intent = {
+      name: 'TestIntent',
+      confirmationStatus: 'None',
+      slots: { }
+    }
+
+    describe('addDialogDelegate', () => {
+      it('should be a function', () => {
+        const message = new AlexaMessageBuilder()
+        expect(typeof message.addDialogDelegate).toBe('function')
+      })
+
+      it('should add a delegate directive', () => {
+        const message = new AlexaMessageBuilder().addDialogDelegate(intent)
+        expect(message.get()).toEqual({
+          version: '1.0',
+          response: {
+            shouldEndSession: true,
+            directives: [
+              {
+                type: 'Dialog.Delegate',
+                updatedIntent: intent
+              }
+            ]
+          }
+        })
+      })
+    })
+
+    describe('addDialogElicitSlot', () => {
+      it('should be a function', () => {
+        const message = new AlexaMessageBuilder()
+        expect(typeof message.addDialogElicitSlot).toBe('function')
+      })
+
+      it('should add a elicit slot directive', () => {
+        const message = new AlexaMessageBuilder().addDialogElicitSlot('slotname', intent)
+        expect(message.get()).toEqual({
+          version: '1.0',
+          response: {
+            shouldEndSession: true,
+            directives: [
+              {
+                type: 'Dialog.ElicitSlot',
+                slotToElicit: 'slotname',
+                updatedIntent: intent
+              }
+            ]
+          }
+        })
+      })
+    })
+
+    describe('addDialogConfirmSlot', () => {
+      it('should be a function', () => {
+        const message = new AlexaMessageBuilder()
+        expect(typeof message.addDialogConfirmSlot).toBe('function')
+      })
+
+      it('should add a confirm slot directive', () => {
+        const message = new AlexaMessageBuilder().addDialogConfirmSlot('slotname', intent)
+        expect(message.get()).toEqual({
+          version: '1.0',
+          response: {
+            shouldEndSession: true,
+            directives: [
+              {
+                type: 'Dialog.ConfirmSlot',
+                slotToConfirm: 'slotname',
+                updatedIntent: intent
+              }
+            ]
+          }
+        })
+      })
+    })
+
+    describe('addDialogConfirmIntent', () => {
+      it('should be a function', () => {
+        const message = new AlexaMessageBuilder()
+        expect(typeof message.addDialogConfirmIntent).toBe('function')
+      })
+
+      it('should add a delegate directive', () => {
+        const message = new AlexaMessageBuilder().addDialogConfirmIntent(intent)
+        expect(message.get()).toEqual({
+          version: '1.0',
+          response: {
+            shouldEndSession: true,
+            directives: [
+              {
+                type: 'Dialog.ConfirmIntent',
+                updatedIntent: intent
+              }
+            ]
+          }
+        })
+      })
+    })
+  })
 })
